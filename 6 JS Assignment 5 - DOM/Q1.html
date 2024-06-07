@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Number Generator</title>
+  </head>
+  <body>
+    <p id="main">
+      I am learning to generate random number. I will be able to handle
+      randomness in any of my applications that needs it. Press the button to
+      get a random number.
+    </p>
+
+    <button id="btn" onclick="displayRandomNumber()">Click Me!!</button>
+
+    <p id="num"></p>
+    <div id="feedback"></div>
+
+    <script>
+      function displayRandomNumber() {
+        // Generate a random whole number between -20 and 20
+        var randomNumber = Math.floor(Math.random() * 41) - 20;
+
+        // Display the random number
+        document.getElementById("num").textContent = randomNumber;
+
+        // Display "Hot" if the number is positive, "Cold" if negative
+        var feedback = randomNumber >= 0 ? "Hot" : "Cold";
+        document.getElementById("feedback").textContent = feedback;
+      }
+    </script>
+  </body>
+</html>

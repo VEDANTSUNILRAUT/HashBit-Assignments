@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Div</title>
+    <style>
+      #container {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 20px;
+      }
+
+      .newDiv {
+        background-color: lightblue;
+        border: 1px solid blue;
+        margin-top: 10px;
+        text-align: center;
+        line-height: 100px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script>
+      function createDiv(width, height, text) {
+        var container = document.getElementById("container");
+
+        var newDiv = document.createElement("div");
+
+        newDiv.style.width = width + "px";
+        newDiv.style.height = height + "px";
+
+        newDiv.className = "newDiv";
+
+        newDiv.textContent = text;
+
+        container.appendChild(newDiv);
+      }
+
+      // Do not change this code
+      window.createDiv = createDiv;
+      createDiv(200, 100, "This is a new div!");
+    </script>
+  </body>
+</html>
